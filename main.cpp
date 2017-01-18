@@ -16,7 +16,7 @@ void outer_points(unsigned short int n, unsigned short int m)
         for(unsigned short int i = 0; i < n; i++)
         {
             if(val < left_arr[i] || val > right_arr[i])
-                result++;   //попали в границы отрезка
+                result++;   //не попали в границы отрезка
         }
         cout << result << " ";
     }
