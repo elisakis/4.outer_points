@@ -7,16 +7,16 @@ void outer_points(unsigned short int n, unsigned short int m)
     int left_arr[n], right_arr[n], val, result;
     for(unsigned short int i = 0; i < n; i++)
     {
-        cin >> left_arr[i] >> right_arr[i]; //левая и правая границы отрезков (всего n)
+        cin >> left_arr[i] >> right_arr[i]; //Р»РµРІР°СЏ Рё РїСЂР°РІР°СЏ РіСЂР°РЅРёС†С‹ РѕС‚СЂРµР·РєРѕРІ (РІСЃРµРіРѕ n)
     }
     for(unsigned short int j = 0; j < m; j++)
     {
-        cin >> val;     //координата точки (всего m)
-        result = 0;     //скольки отрезкам не принадлежит
+        cin >> val;     //РєРѕРѕСЂРґРёРЅР°С‚Р° С‚РѕС‡РєРё (РІСЃРµРіРѕ m)
+        result = 0;     //СЃРєРѕР»СЊРєРё РѕС‚СЂРµР·РєР°Рј РЅРµ РїСЂРёРЅР°РґР»РµР¶РёС‚
         for(unsigned short int i = 0; i < n; i++)
         {
             if(val < left_arr[i] || val > right_arr[i])
-                result++;   //попали в границы отрезка
+                result++;   //РїРѕРїР°Р»Рё РІ РіСЂР°РЅРёС†С‹ РѕС‚СЂРµР·РєР°
         }
         cout << result << " ";
     }
@@ -24,7 +24,7 @@ void outer_points(unsigned short int n, unsigned short int m)
 
 int main()
 {
-    unsigned short int n, m;    //количество отрезков и количество точек
+    unsigned short int n, m;    //РєРѕР»РёС‡РµСЃС‚РІРѕ РѕС‚СЂРµР·РєРѕРІ Рё РєРѕР»РёС‡РµСЃС‚РІРѕ С‚РѕС‡РµРє
     cin >> n >> m;
     outer_points(n, m);
     return 0;
